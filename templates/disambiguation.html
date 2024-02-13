@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disambiguation Page</title>
+</head>
+<body>
+    <h1>Disambiguation</h1>
+    <p>複数の意味が提供されたプロンプトに見つかりました。意図された意味を選択してください：</p>
+    <ul>
+        {% for option in options %}
+            <li><a href="{{ url_for('generate_text', prompt=option) }}">{{ option }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
